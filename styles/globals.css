@@ -1,0 +1,272 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+body{
+min-height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+background-color: black;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+/* Set the video container to cover the whole viewport */
+.video-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Center the button vertically and horizontally */
+.center-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Make the video fill the container */
+.video-background {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* Hide the video controls */
+video::-webkit-media-controls {
+  display:none;
+}
+
+@keyframes glow{
+    0% {
+        box-shadow: 0 0 5px cyan, 0 0 15px cyan;
+      }
+      50% {
+        box-shadow: 0 0 25px cyan, 0 0 50px cyan;
+      }
+      100% {
+        box-shadow: 0 0 50px cyan, 0 0 100px cyan;
+      }      
+}
+
+button {
+    box-shadow: 0 0 5px cyan, 0 0 10px cyan;
+}
+
+button:hover {
+animation: glow 1s infinite;
+}
+
+.card1:hover{
+    box-shadow: 0 0 5px cyan, 0 0 10px cyan, 0 0 15px cyan;
+}
+
+.card2:hover{
+    box-shadow: 0 0 5px cyan, 0 0 10px cyan, 0 0 15px cyan;
+}
+
+.card3:hover{
+    box-shadow: 0 0 5px cyan, 0 0 10px cyan, 0 0 15px cyan;
+}
+
+.icons{
+font-size: 5rem}
+
+.box{
+    background: rgb(59, 220, 220);
+    width: auto;
+    height: 2px;
+    margin: 5px 0;
+    display: flex;    
+}  
+
+.vertical{
+    height: 50px;
+    width: 0.2vw;
+    background-color: rgb(59, 220, 220);
+    margin: 0 180px;
+}
+
+.vtext1{
+    position: relative;
+    top: 65px;
+    width: 260px;
+}
+
+.vdesc1{
+    position: relative;
+    top: 61px;
+    width: 150px;
+    font-size: 15px;
+}
+
+.card{
+    padding-top: 14%;
+    transition: transform 0.3s ease-in-out;
+    
+}
+
+.card:hover {
+  transform: scale(1.09);
+}
+
+.certificate{
+    transition: transform 0.4s ease-in-out;
+}
+
+.certificate:hover{
+    transform: scale(1.07);
+}
+
+.hr1{
+    background: rgb(59, 220, 220);
+    width: auto;
+    height: 1.5px;
+    margin: 5px 0;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+#page{
+    position: relative;
+    height: 60vh;
+    width: 99.66vw;
+    background-color: #000;
+}
+.page-inner{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0vw 5vw;
+    font-family: sans-serif;
+    height: 33.3%;
+    width: 100%;
+    color: #fff;
+    border-top: .5px solid #ffffff5c;
+    border-bottom: .5px solid #ffffff48;
+}
+.page-inner>i{
+    font-weight: 100;
+    font-size: 2.4vw;
+    position: relative;
+    z-index: 9999;
+}
+.page-inner>h1{
+    font-size: 1.8vw;
+    font-weight: 100;
+    position: relative;
+    z-index: 9999;
+}
+
+.center{
+    height: 0%;
+    width: 100%;
+    background-color: rgb(20, 220, 220);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    transition: all ease .6s;
+}
+
+.page-inner:hover .center{
+    height: 100%;
+}
+
+footer{
+    background-color: #000;
+    height: 120px;
+    overflow: hidden;
+}
+
+.footer{
+    display: flex;
+    padding: 32px 598px;
+}
+
+.footerspan{
+    padding: 77px;
+}
+
+::-webkit-scrollbar {
+    width: 6px; 
+}
+  
+::-webkit-scrollbar-track {
+    background-color: black; 
+}
+  
+::-webkit-scrollbar-thumb {
+    background-color: black; 
+    border-radius: 5px; 
+}
+  
+::-webkit-scrollbar-thumb:hover {
+    background-color: #555; 
+}
+
+.gallery{
+    width: 900;
+    display: flex;
+    overflow-x: scroll;
+}
+
+.gallery div{
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 20px;
+    padding: 10px;
+    flex: none;
+}
+
+.gallery div img{
+    height: 330px;
+    width: 100%;
+    filter: grayscale(100%);
+    transition: transform 0.5s;
+}
+
+.gallery::-webkit-scrollbar{
+    display: none;
+}
+
+.gallery-wrap{
+    display: flex;
+    align-items: center;
+}
+
+.gallery div img:hover{
+    filter: grayscale(0);
+    cursor: pointer;
+    transform: scale(1.06);
+}
+
+@font-face {
+    font-family: "burtons";
+    src: url("../public/Burtons.otf");
+}
